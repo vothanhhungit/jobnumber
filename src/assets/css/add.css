@@ -1,0 +1,581 @@
+.info-company .formStyle label,
+.rightPosition label {
+    text-align: right;
+    width: 100px;
+}
+
+.info-company li:first-child,
+.info-company li:nth-child(4),
+.info-company li:nth-child(11),
+.info-company li:nth-child(12) {
+    width: 15%
+}
+
+.info-company li:nth-child(2),
+.info-company li:nth-child(5) {
+    width: 60%;
+}
+
+.info-company li:nth-child(3),
+.info-company li:nth-child(6),
+.rightUltil li:first-child,
+.tanks_accSys li:nth-child(2),
+.tanks_accSys li:nth-child(3) {
+    /*width: 25%;*/
+}
+
+.info-company li:nth-child(4),
+.info-company li:nth-child(6) {
+    /*height: 90px;*/
+}
+
+.info-company li:nth-child(4) .row1,
+.info-company li:nth-child(6) .row1 {
+    margin-bottom: 15px;
+}
+
+.info-company li:nth-child(5),
+li.replateData,
+.disTable,
+.info-company li:nth-child(10) {
+    display: table;
+}
+
+.info-company li:nth-child(7),
+.info-company li:nth-child(8),
+.info-company li:nth-child(9),
+.info-company li:nth-child(10) {
+    width: 50%
+}
+
+.info-company li:nth-child(8),
+.info-company li:nth-child(10),
+.info-company li:nth-child(14),
+.info-company li:nth-child(3),
+.formStyle.rightUltil li:nth-child(4),
+.tanks_accSys li:nth-child(3),
+.col-edit-data .pull-right li,
+.area-edit-accSys  li:nth-child(6),
+.area-edit-accSys  li:nth-child(8),
+.col2 li:nth-child(2),
+.col2 li:nth-child(4),
+.col2 li:nth-child(6),
+.col2 li:nth-child(8) {
+    padding-right: 0;
+}
+
+.info-company .oldData label,
+.info-company .replateData label {
+    line-height: 20px;
+}
+
+.replateData .dataNew {
+    position: relative;
+    padding-right: 29px;
+}
+
+.replateData .dataNew textarea,
+.replateData .dataNew input {
+    border-right: none;
+}
+
+.info-company .oldData textarea,
+.col-edit-data textarea {
+    resize:none;
+}
+
+.replateData .btn-ReplateData {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    width: 30px;
+    height: 100%;
+}
+
+.info-company .input-group input,
+.tabulti .input-group input,
+.input-group-select .otp-datTime,
+.input-group-select select.pull-left {
+    width: 50%;
+}
+
+.info-company .input-group input:last-child,
+.tabulti .input-group input:last-child {
+    border-left: none;
+}
+
+.info-company li:nth-child(13),
+.info-company li:nth-child(14),
+.rightUltil li:nth-child(4) {
+    width: 35%;
+}
+
+.tabulti  .rightPosition,
+.rightUltil.formStyle,
+.formStyle.rightUltil li,
+.tanks_accSys .formStyle li {
+    margin-bottom: 0;
+}
+
+.tabulti {
+    position: relative;
+    padding-top: 5px;
+}
+
+.tabulti .nav-tabs {
+    padding-left: 15px;
+}
+
+.tabulti .nav-tabs li {
+    margin-bottom: -1px !important;
+}
+
+.rightPosition {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    width: 80%;
+}
+
+.rightPosition li {
+    width: 50%;
+    margin-bottom: 0 !important;
+    height: auto;
+}
+
+.rightPosition li:last-child {
+    padding-right: 15px;
+}
+
+.tabulti .nav-tabs > li.active > a,
+.tabulti .nav-tabs > li.active > a:focus,
+.tabulti .nav-tabs > li.active > a:hover,
+.navBg {
+    background-color: #f3ebc1;
+}
+
+.jobHrForm .tabulti .nav-tabs > li.active > a,
+.jobHrForm .tabulti .nav-tabs > li.active > a:focus,
+.jobHrForm .tabulti .nav-tabs > li.active > a:hover,
+.jobHrForm .navBg,
+.jobHrForm .navUtilities {
+    background-color: #d1e88b;
+}
+.jobHrForm .scrollableArea{
+    border-left:8px solid #d1e88b;
+}
+
+.jobFeatureForm .tabulti .nav-tabs > li.active > a,
+.jobFeatureForm .tabulti .nav-tabs > li.active > a:focus,
+.jobFeatureForm .tabulti .nav-tabs > li.active > a:hover,
+.jobFeatureForm .navBg,
+.jobFeatureForm .navUtilities {
+    background-color: #f2ecbc;
+}
+.jobFeatureForm .scrollableArea{
+    border-left:8px solid #f2ecbc;
+}
+
+.jobEventForm .tabulti .nav-tabs > li.active > a,
+.jobEventForm .tabulti .nav-tabs > li.active > a:focus,
+.jobEventForm .tabulti .nav-tabs > li.active > a:hover,
+.jobEventForm .navBg,
+.jobEventForm .navUtilities {
+    background-color: #7fefc9;
+}
+.jobEventForm .scrollableArea{
+    border-left:8px solid #7fefc9;
+}
+
+.jobTosForm .tabulti .nav-tabs > li.active > a,
+.jobTosForm .tabulti .nav-tabs > li.active > a:focus,
+.jobTosForm .tabulti .nav-tabs > li.active > a:hover,
+.jobTosForm .navBg,
+.jobTosForm .navUtilities {
+    background-color: #ffa8da;
+}
+.jobTosForm .scrollableArea{
+    border-left:8px solid #ffa8da;
+}
+
+.list-number-click {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+
+.list-number-click li {
+    padding: 6px 3px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.list-number-click li:first-child,
+.labelNumber_1 {
+    background: #fabf8f;
+}
+
+.list-number-click li:nth-child(2),
+.labelNumber_2 {
+    background: #c4d79b;
+}
+
+.list-number-click li:nth-child(3),
+.labelNumber_3 {
+    background: #b1a0c7;
+}
+
+.list-number-click li:nth-child(4),
+.labelNumber_4 {
+    background: #00b0f0;
+}
+
+.list-number-click li a,
+.labelNumber i {
+    display: block;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #000;
+    line-height: 15px;
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+.list-number-click li a:hover {
+    color: #fff;
+    text-decoration: none;
+    border-color: #fff;
+}
+
+.rightUltil {
+    margin-left: 100px;
+}
+
+.formStyle.rightUltil li {
+    height: auto;
+}
+
+/*
+.rightUltil li:nth-child(2),
+.rightUltil li:nth-child(3) {
+    width: 20%;
+}
+*/
+.formStyle.rightUltil li:nth-child(4) .righForm {
+    margin-left: 120px;
+}
+
+.boxScroll {
+    max-height: 600px;
+    overflow: auto;
+}
+
+.table-condensed {
+    width: 100%;
+    color: #333;
+}
+
+.form_datetime td,
+.form_datetime th {
+    border: 0 none;
+    border-radius: 4px;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+}
+
+.tanks_accSys,
+.area-edit-accSys,
+.col-edit-data {
+    padding: 15px 15px 0 35px;
+}
+
+.tanks_accSys {
+    background: #f2f2f0;
+}
+
+.col-edit-data .pull-left,
+.col-edit-data .pull-right {
+    width: 50%;
+}
+
+.tanks_accSys .formStyle li {
+    margin-bottom: 0
+}
+
+.input-group-select {
+    width: calc(100% - 110px);
+}
+
+.area-edit-accSys li.pull-left {
+    width: 50%;
+}
+
+.area-edit-accSys .formStyle label {
+    width: 130px;
+}
+
+.area-edit-accSys .righForm {
+    /*margin-right: 140px;*/
+}
+
+.area-edit-accSys  li.pull-left .righForm {
+    margin-right: 0;
+    /*width: calc(100% - 130px);
+    margin-left: 130px*/
+
+}
+
+
+.area-edit-accSys ul.pull-right {
+    width: 500px;
+}
+
+.area-edit-accSys ul.pull-right label {
+    width: 100px;
+}
+
+.area-edit-accSys ul.pull-right .righForm {
+    /*margin: 0 0 0 105px;*/
+}
+
+.area-edit-accSys ul.pull-right li {
+    padding-right: 0;
+}
+
+.col-edit-data .pull-left li,
+.col-edit-data .pull-right li {
+    width: 100%
+}
+.col-edit-data .pull-right {
+/*     padding-left: 15px; */
+}
+
+.col-edit-data .pull-right label,
+.loadarena4 li:nth-child(6) label {
+    /*width: 110px;
+    text-align: right;*/
+}
+
+.labelNumber {
+    padding: 5px 5px 5px 2px;
+    display: inline-block;
+}
+
+.title_label {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 100%
+}
+
+.labelNumber i {
+    font-style: normal;
+    margin-bottom: 0;
+}
+
+.loadarena2 .dataNew .pull-left:first-child {
+    width: 40%;
+}
+
+.loadarena2 .dataNew .pull-left.auto input {
+    border-right:1px solid #abadb3;
+}
+
+.loadarena2 .dataNew .pull-left:first-child select {
+    width: 100%;
+}
+
+.dataNew .auto {
+    position: relative;
+    width: 15%;
+}
+
+.dataNew div.auto {
+    /*padding-left: 30px;*/
+}
+
+.dataNew .auto label {
+    /*position: absolute;
+    top: -25px;
+    left: 30px;*/
+    width: 100%;
+    text-align: center;
+}
+
+.dataNew .auto span {
+    /*top:5px;
+    left: 10px;
+    position: absolute;*/
+}
+
+.dataNew .auto span.last {
+    right: -30px !important;
+    left: inherit;
+}
+
+.loadarena2 li:first-child {
+    /*padding-top: 20px;
+    height: 55px;*/
+}
+
+.loadarena2 .pull-right li:nth-child(2) {
+    height: 35px;
+}
+
+.loadarena3 li:first-child .auto {
+    width: auto;
+}
+
+.loadarena3 li .disTable select,
+.loadarena4 li:nth-child(7) {
+    width: 100%;
+}
+
+.loadarena4 li:first-child .auto {
+    width: 50%;
+}
+
+.loadarena4 li:nth-child(3) .righForm .pull-left {
+    width: 33%;
+    display: table;
+} 
+
+.loadarena4 li:nth-child(3) .righForm .pull-left span,
+.loadarena4 li:nth-child(3) .righForm .pull-left input {
+    display: table-cell;
+}
+
+.loadarena4 li:nth-child(3) .righForm .pull-left span {
+    width: 75px;
+    display: table-cell;
+    color: #333;
+}
+
+.loadarena4 li:nth-child(3) .righForm .pull-left span.last {
+    color: #666;
+    font-size: 11px;
+}
+
+.loadarena4 li:nth-child(3) .righForm .pull-left:nth-child(2) span {
+    width: 50px;
+}
+
+.loadarena4 li:nth-child(2),
+.loadarena4 li:nth-child(4) {
+    line-height: 30px
+}
+
+.loadarena4 .label200 label {
+    width: 190px;
+}
+
+.loadarena4 .label200 .righForm {
+    margin-left: 200px;
+}
+
+
+
+
+
+
+.list-pullDown {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.loadarena4 li.label200:last-child .list-checkboxes {
+    bottom: 50px;
+    top: inherit;
+}
+
+.pull-left.label200 {
+    float: none;
+    width: 100%;
+}
+
+.col-edit-data .list-pullDown .multiselect.pull-left {
+    width: 100px !important;
+}
+
+.title_label {
+    height: 26px;
+}
+
+.title_label.panel-heading {
+    padding: 0;
+    background-color: #e1dfd6;
+    top: 0px !important;
+}
+
+.title_label.panel-heading .textTitle {
+    display: inline-block;
+    background-color: #c1c0b8;
+    margin-left: -4px;
+    height: 100%;
+    vertical-align: top;
+    padding: 0 15px;
+    line-height: 26px
+}
+
+.loadarena1 ul.formStyle,
+.loadarena2 ul.formStyle,
+.loadarena3 ul.formStyle,
+.loadarena4 ul.formStyle {
+    /*margin-top: 20px*/
+}
+
+.text-muted {
+    font-style: normal;
+}
+
+.righForm .text-muted {
+    line-height: 32px;
+    display: inline-block;
+    margin-left: 10px
+}
+
+.replateData {
+    overflow: hidden;
+}
+
+.loadarena1.col2 li.last {
+    padding-right: 0;
+    width: 100%
+}
+
+.radioForm {
+    color: #333
+}
+
+.radioForm .text-muted {
+    margin-left: 0;
+}
+
+.loadarena2 .title_label {
+    /*top: 58px;*/
+}
+
+.loadarena2.col2 .last{
+    float: right;
+    padding-right: 0
+}
+
+.radioForm span {
+    display: inline-block;
+    margin-right: 10px
+}
+
+.loadarena3 .text-muted {
+    line-height: 100%
+}
+
+.righForm.radioForm,
+.loadarena4 .righForm {
+    margin-left: 140px;
+}
+
+.w25p {
+    width: 25%;
+}

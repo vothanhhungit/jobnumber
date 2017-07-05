@@ -1,0 +1,69 @@
+.background-color-search {
+    background: #dce6f1;
+}
+
+table.zlist0000 th, table.zlist0000 td {
+    padding: 2px;
+    border: 1px solid #cac1c1;
+    border-spacing: 0px;
+}
+
+#dataHeader th {
+    height: 30px;
+}
+
+.btnGroup {
+    position: relative;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dropdown-content {
+    margin-left: 5px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 75px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.show {
+    display: block;
+}
+
+.colorRowOdd {
+    background: #f2f2e4;
+}
+
+.colorRowEven {
+    background-color: white;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.zlist0000 li {
+     margin-bottom: 5px;
+     height: 45px;
+     padding-right: 3%;
+}
+.zlist0000 li button {
+    padding: 6px 5px;
+    width: 100%;
+}
+.selectedRow{
+    background-color: #ccdff9 !important;
+}

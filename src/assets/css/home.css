@@ -1,0 +1,220 @@
+.companySearch li:nth-child(1),
+.companySearch li:nth-child(2) {
+    width: 40%;
+}
+
+.companySearch li:nth-child(4),
+.companySearch li:nth-child(8) {
+    width: 30%;
+    margin-right: 10%;
+}
+
+.companySearch li:nth-child(3),
+.companySearch li:nth-child(7) {
+    width: 20%;
+    padding-right: 0;
+}
+
+.companySearch li:nth-child(5),
+.companySearch li:nth-child(6),
+.companySearch li:nth-child(9) {
+    width: 20%;
+}
+
+.companySearch li:nth-child(10) {
+    width: 12%;
+}
+
+.companySearch li:nth-child(11) {
+    width: 10%;
+}
+.companySearch li:nth-child(12) {
+    width: 13%;
+}
+
+.companySearch li:nth-child(13) {
+    width: 5%;
+    padding-right: 0;
+    text-align: right;
+}
+
+.companySearch li:nth-child(10) .righForm {
+    margin-left: 70px;
+}
+
+.companySearch li:nth-child(11) .righForm {
+    margin-left: 45px;
+}
+.companySearch li:nth-child(12) .righForm {
+    margin-left: 60px;
+}
+
+table.data th {
+	text-align:center;
+    background: #2690CC;
+    color: #fff;
+}
+table.data th{
+	border-right: 1px solid gray;
+}
+table.data th, table.data td {
+    padding: 2px;
+    border-spacing: 0px;
+}
+
+.corner-frame {
+    float: left;
+}
+
+.scrollable-rows-frame {
+    float: left;
+    overflow: hidden;
+}
+
+.scrollable-columns-frame {
+    overflow: hidden;
+}
+
+.scrollable-data-frame {
+    overflow: auto;
+}
+
+.no-border-top{
+    border-top: none !important;
+}
+.no-border-bottom{
+    border-bottom: none !important;
+}
+
+#dataTable td, #scrollableHeader th{
+    border-top: none;
+    border-left: none;
+}
+#dataTable {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#dataTable td {
+    height: 28px;
+}
+
+#scrollableTable td a {
+    color: #337ab7;
+}
+
+#scrollableTable .scrollable-rows-table td:first-child, #scrollableHeader .scrollable-rows-table th:first-child, 
+#scrollableTable .corner-table td:first-child, #scrollableHeader .corner-table th:first-child {
+    border-left: 1px solid grey;
+}
+
+.scrollable-data-table td.colorRow{
+    background-color: #fdfdd8;
+}
+
+.scrollable-data-table tr:nth-child(2n),
+.screen_zlj0000 table tr:nth-child(2n) {
+    background: #f2f2e4;
+}
+
+/* .scrollable-data-table tr:hover td[rowspan] {
+   background: #ccdff9; 
+}
+
+.scrollable-data-table tr:hover td:not([rowspan]) {
+   background: #ccdff9; 
+}
+ */
+.special-td input {
+    vertical-align: middle;
+    margin-top:-3px;
+}
+
+.w80 {
+    width: 80px
+}
+.w90 {
+    width: 90px
+}
+
+.w100 {
+    width: 100px
+}
+.w150 {
+    width: 150px
+}
+.w200 {
+    width: 200px;
+}
+
+.thick-border{
+    border-bottom: 2px solid #cac1c1;
+    border-right: 1px solid #efeded;
+}
+
+.job-normal-border{
+	border: 1px solid #efeded;
+}
+.job-thick-border{
+    border: 1px solid #efeded;
+    border-bottom: 2px solid #cac1c1;
+}
+.client-odd-background{
+    background-color: #fcecea
+}
+.job-2-odd-background{
+    background-color: #FFFFFF;
+}
+.job-2-even-background{
+    background-color: #f2f2f0;
+}
+.client-even-background{
+    background-color: #dbf4c3;
+}
+.job-1-odd-background{
+    background-color: #FFFFFF
+}
+.job-1-even-background{
+    background-color: #f2f2f0
+}
+
+.scrollable-data-table > tbody > tr > td > div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+}
+
+#scrollableTable {
+    overflow-x :scroll;
+    overflow-y :scroll;
+}
+#scrollableHeader {
+    overflow-x :hidden;
+    overflow-y :scroll;
+}
+
+a {
+    cursor: pointer;
+}
+/*-------------Start-screen_zlj0000---------*/
+.search-zlj0000 .companySearch li {
+	width: 33.3%;
+	margin-right: 0;
+}
+
+.search-zlj0000 .companySearch li:nth-child(6) {
+	padding-right: 0;
+}
+
+.search-zlj0000 .companySearch li.percent22 {
+	width: 22%;
+	padding-right: 3%;
+}
+
+.search-zlj0000 .companySearch li.last {
+	width: 100px;
+	padding-right: 0;
+}
+/*-------------End-screen_zlj0000---------*/

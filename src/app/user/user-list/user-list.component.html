@@ -1,0 +1,76 @@
+<div class="x_title">
+  <h2>Users <a href="users/create" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Create New </a></h2>
+  <div class="clearfix"></div>
+</div>
+<div ng-if=currentAccount class="mainContainer" ng-controller="UserListController">
+  <!-- overlay -->
+  <div class="overlay" *ngIf="overlay">
+    <div class="loader"></div>
+  </div>
+  <!--  End overlay -->
+  <div id="nonscrollablearea" ng-show="!isLoading">
+    <div class="table-responsive" id="tableHeader" ng-class="{'hidden_pager':hidden_pager}">
+      <table ng-table="dataTable" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="mydatatable_info">
+        <thead>
+          <tr role="row">
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" ng-click="sortBy('id')">ID</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" ng-click="sortBy('name')">Name</th>
+            <th tabindex="0" rowspan="1" colspan="1">Email</th>
+            <th tabindex="0" rowspan="1" colspan="1">Role</th>
+            <th tabindex="0" rowspan="1" colspan="1">Avatar</th>
+            <th tabindex="0" rowspan="1" colspan="1">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--<tr ng-repeat="x in data | orderBy:propertyName:reverse" ng-if="messageError==''" class="cursor" ng-class="{'selectedRow':selectedRow==$index}"
+            ng-click="selectRow($index)" id="row-id-@{{x.id}}">
+            <td class="alignCenter" data-title="'id'" sortable="'id'">@{{x.id}}</td>
+            <td class="alignCenter">
+              @{{x.name | truncate:true:50:' ...'}}
+            </td>
+            <td>
+              @{{x.email}}
+            </td>
+            <td>
+              @{{x.role_display_name}}
+            </td>
+            <td style="text-align: center">
+              <img ng-src='@{{ x.avatar && "x.avatar" || "../uploads/users/no-image-icon-md.png"}}' alt="@{{x.name}}" style="width: 100px"
+              />
+            </td>
+            <td class="alignCenter">
+              <a href="users/@{{x.id}}/edit" class="btn btn-info btn-xs">
+		                        	<i class="fa fa-pencil" title="Edit"></i>
+		                        </a>
+              <a ng-click="deleteRow(x.id)" class="btn btn-danger btn-xs">
+		                        	<i class="fa fa-trash-o" title="Delete"></i>
+	                        	</a>
+            </td>
+          </tr>
+          <tr ng-if="messageError!=''">
+            <td colspan="16">@{{messageError}}</td>
+          </tr>-->
+        </tbody>
+        <tfoot>
+          <tr role="row">
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" ng-click="sortBy('id')">ID</th>
+            <th class="sorting" tabindex="0" rowspan="1" colspan="1" ng-click="sortBy('name')">Name</th>
+            <th tabindex="0" rowspan="1" colspan="1">Email</th>
+            <th tabindex="0" rowspan="1" colspan="1">Role</th>
+            <th tabindex="0" rowspan="1" colspan="1">Avatar</th>
+            <th tabindex="0" rowspan="1" colspan="1">Action</th>
+          </tr>
+        </tfoot>
+      </table>
+      <script type="text/javascript">
+        setTimeout(
+          function () {
+            if ($(window).width() <= 767) {
+              setWidthPager();
+            }
+          },
+          5000);
+      </script>
+    </div>
+  </div>
+</div>

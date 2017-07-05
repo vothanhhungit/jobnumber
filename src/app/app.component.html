@@ -1,20 +1,180 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="wrapper">
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="url('/')" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>Job Number</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Job Number AdminM</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
 
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="assets/uploads/users/no-image-icon-md.png" class="user-image" alt="$currentUser->name"/>
+                <span class="hidden-xs">$currentUser->name</span>
+              </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="assets/uploads/users/no-image-icon-md.png" class="img-circle" alt="$currentUser->name">
+                <p>
+                  $currentUser->name
+                  <small>Member since   .   </small>
+                </p>
+              </li>
+
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="url('/profile')" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="route('logout')" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <title ng-if=title>@title - Job Number Management System</title>
+      <title ng-if=!title>Job Number Management System</title>
+
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="assets/uploads/users/no-image-icon-md.png" class="img-circle" alt="$currentUser->name">
+        </div>
+        <div class="pull-left info">
+          <p>$currentUser->name</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="treeview">
+          <a href="url('/')"><i class="fa fa-home"></i> <span>Home</span> </a>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+              <i class="fa fa-edit"></i> <span>Users</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+          <ul class="treeview-menu">
+            <li class="">
+              <a href="url('users')"><i class="fa fa-circle-o"></i> List</a>
+            </li>
+            <li class="">
+              <a href="url('users/create')"><i class="fa fa-circle-o"></i> Add user</a>
+            </li>
+            <li class="">
+              <a href="url('users/roles')"><i class="fa fa-circle-o"></i>Roles</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+              <i class="fa fa-edit"></i> <span>Clients</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+          <ul class="treeview-menu">
+            <li class="">
+              <a href="url('clients')"><i class="fa fa-circle-o"></i> List</a>
+            </li>
+            <li class="">
+              <a href="url('client/create')"><i class="fa fa-circle-o"></i>Add Client</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+              <i class="fa fa-edit"></i> <span>Projects</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+          <ul class="treeview-menu">
+            <li class="">
+              <a href="url('projects')"><i class="fa fa-circle-o"></i>List</a>
+            </li>
+            <li class="">
+              <a href="url('project/create')"><i class="fa fa-circle-o"></i>Add Project</a>
+            </li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+              <i class="fa fa-edit"></i> <span>Jobs</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="url('jobs')"><i class="fa fa-circle-o"></i>List</a></li>
+            <li class="">
+              <a href="url('job/create')"><i class="fa fa-circle-o"></i>Add Job</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="box box-info">
+            <div class="box-body pad">
+              <!-- @include('partials.alerts -->
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+          <!-- /.box -->
+
+        </div>
+        <!-- /.col-->
+      </div>
+      <!-- ./row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0
+    </div>
+    <strong>© Copyright (c) 2017 bonseyjaden Inc. All Rights Reserved.</strong>
+  </footer>
+
+</div>
+<!-- ./wrapper -->
