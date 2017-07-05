@@ -13,7 +13,7 @@ export class UserListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loaderService.display(true);
+    //this.loaderService.display(true);
   }
 
 }
