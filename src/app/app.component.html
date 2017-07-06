@@ -156,7 +156,13 @@
           <div class="box box-info">
             <div class="box-body pad">
               <!-- @include('partials.alerts -->
-              <router-outlet></router-outlet>
+              <router-outlet>
+                <!-- overlay -->
+                <div class="overlay" *ngIf="isLoading">
+                  <div class="loader"></div>
+                </div>
+                <!--  End overlay -->
+              </router-outlet>
             </div>
           </div>
           <!-- /.box -->

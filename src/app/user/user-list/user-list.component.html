@@ -2,13 +2,8 @@
   <h2>Users <a href="users/create" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Create New </a></h2>
   <div class="clearfix"></div>
 </div>
-<div ng-if=currentAccount class="mainContainer" ng-controller="UserListController">
-  <!-- overlay -->
-  <div class="overlay" *ngIf="showLoader">
-    <div class="loader"></div>
-  </div>
-  <!--  End overlay -->
-  <div id="nonscrollablearea" ng-show="!isLoading">
+<div class="mainContainer" ng-controller="UserListController">
+  <div id="nonscrollablearea">
     <div class="table-responsive" id="tableHeader" ng-class="{'hidden_pager':hidden_pager}">
       <table ng-table="dataTable" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="mydatatable_info">
         <thead>
@@ -22,20 +17,20 @@
           </tr>
         </thead>
         <tbody>
-          <!--<tr ng-repeat="x in data | orderBy:propertyName:reverse" ng-if="messageError==''" class="cursor" ng-class="{'selectedRow':selectedRow==$index}"
+          <tr *ngFor="let x of users.Datas" class="cursor" ng-class="{'selectedRow':selectedRow==$index}"
             ng-click="selectRow($index)" id="row-id-@{{x.id}}">
-            <td class="alignCenter" data-title="'id'" sortable="'id'">@{{x.id}}</td>
+            <td class="alignCenter" data-title="'id'" sortable="'id'">{{x.id}}</td>
             <td class="alignCenter">
-              @{{x.name | truncate:true:50:' ...'}}
+              {{x.name}}
             </td>
             <td>
-              @{{x.email}}
+              {{x.email}}
             </td>
             <td>
-              @{{x.role_display_name}}
+              {{x.role_display_name}}
             </td>
             <td style="text-align: center">
-              <img ng-src='@{{ x.avatar && "x.avatar" || "../uploads/users/no-image-icon-md.png"}}' alt="@{{x.name}}" style="width: 100px"
+              <img [src]='x.avatar && "x.avatar" || "assets/uploads/users/no-image-icon-md.png"' alt="{{x.name}}" style="width: 100px"
               />
             </td>
             <td class="alignCenter">
@@ -47,9 +42,9 @@
 	                        	</a>
             </td>
           </tr>
-          <tr ng-if="messageError!=''">
-            <td colspan="16">@{{messageError}}</td>
-          </tr>-->
+          <tr *ngIf="users.Datas?.length === 0">
+            <td colspan="16">{{msg.NO_ROW}}</td>
+          </tr>
         </tbody>
         <tfoot>
           <tr role="row">

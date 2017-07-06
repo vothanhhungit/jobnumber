@@ -6,17 +6,18 @@ import {LoaderService} from 'app/services/loader.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  private showLoader : Boolean;
-  constructor(private LoaderService : LoaderService) {
+export class AppComponent implements OnInit {
+  public isLoading : Boolean;
+  constructor(private loaderService: LoaderService) {
 
   }
 
-ngOnInit() {
-  this.LoaderService.status.subscribe((val : Boolean) => {
-    this.showLoader = val;
-  })  
-}
+  ngOnInit() {
+    this.loaderService.status.subscribe((val: Boolean) => {
+      this.isLoading = val;
+    })
+    
+  }
 
   title = 'app';
 }
