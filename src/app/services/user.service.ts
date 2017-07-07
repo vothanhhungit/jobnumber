@@ -3,6 +3,7 @@ import {LoaderService} from 'app/services/loader.service';
 import {Observable} from 'rxjs/Observable';
 import {Http, Response} from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class UserService {
@@ -10,7 +11,22 @@ export class UserService {
 
     }
     GetList(apiUrl): Observable<any[]> {
-        return this._http.get(apiUrl).map((response: Response) => response.json());
+        return this._http.get(apiUrl).map(
+            (response: Response) => response.json()
+        ).catch((e:any) => {
+            //alert(e.json().error)
+            if (e.status === 401) {
+                //alert()
+                return Observable.throw('Unauthorized');
+            }
+            // do any other checking for statuses here
+        });
+        // ...using get request
+        //return this._http.get('http://595e5ac6ffb74e0011021717.mockapi.io/api/v1/users')
+        // ...and calling .json() on the response to return data
+            //.map((res:Response) => res.json())
+            //...errors if any
+            //.catch((error:any) => Observable.throw(error.json().error || 'Server error'));
     }
     // GetList(): object {
 

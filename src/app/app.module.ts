@@ -12,6 +12,14 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import {LoaderService} from './services/loader.service';
 //import {UserService} from './services/user.service';
 
+import {AuthGuard} from 'app/guards/auth.guard';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { FooterComponent } from './footer/footer.component';
+
+import {FormsModule} from '@angular/forms';
+import {AuthenticationService} from 'app/services/authentication.service';
 
 
 
@@ -20,15 +28,22 @@ import {LoaderService} from './services/loader.service';
     AppComponent,
     HomeComponent,
     // UserComponent,
-    UserListComponent
+    UserListComponent,
+    LoginComponent,
+    HeaderComponent,
+    SideBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     routing,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [
     LoaderService,
+    AuthGuard,
+    AuthenticationService
     // UserService,
   ],
   bootstrap: [AppComponent]

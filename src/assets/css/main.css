@@ -51,3 +51,6 @@ table.dataTable tfoot .sorting:after {
     pointer-events: none;
     opacity: 0.7;
 }
+.not-logged {
+    margin-left: 0px !important;
+}

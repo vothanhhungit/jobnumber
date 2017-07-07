@@ -1,0 +1,94 @@
+<aside class="main-sidebar" *ngIf="currentUser">
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+    <title ng-if=title>@title - Job Number Management System</title>
+    <title ng-if=!title>Job Number Management System</title>
+
+    <!-- Sidebar user panel -->
+    <div class="user-panel">
+      <div class="pull-left image">
+        <img src="assets/uploads/users/no-image-icon-md.png" class="img-circle" alt="$currentUser->name">
+      </div>
+      <div class="pull-left info">
+        <p>$currentUser->name</p>
+        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+      </div>
+    </div>
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu">
+      <li class="header">MAIN NAVIGATION</li>
+      <li class="treeview">
+        <a href="url('/')"><i class="fa fa-home"></i> <span>Home</span> </a>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+              <i class="fa fa-edit"></i> <span>Users</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+        <ul class="treeview-menu">
+          <li class="">
+            <a href="url('users')"><i class="fa fa-circle-o"></i> List</a>
+          </li>
+          <li class="">
+            <a href="url('users/create')"><i class="fa fa-circle-o"></i> Add user</a>
+          </li>
+          <li class="">
+            <a href="url('users/roles')"><i class="fa fa-circle-o"></i>Roles</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+              <i class="fa fa-edit"></i> <span>Clients</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+        <ul class="treeview-menu">
+          <li class="">
+            <a href="url('clients')"><i class="fa fa-circle-o"></i> List</a>
+          </li>
+          <li class="">
+            <a href="url('client/create')"><i class="fa fa-circle-o"></i>Add Client</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+              <i class="fa fa-edit"></i> <span>Projects</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+        <ul class="treeview-menu">
+          <li class="">
+            <a href="url('projects')"><i class="fa fa-circle-o"></i>List</a>
+          </li>
+          <li class="">
+            <a href="url('project/create')"><i class="fa fa-circle-o"></i>Add Project</a>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+              <i class="fa fa-edit"></i> <span>Jobs</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+        <ul class="treeview-menu">
+          <li class=""><a href="url('jobs')"><i class="fa fa-circle-o"></i>List</a></li>
+          <li class="">
+            <a href="url('job/create')"><i class="fa fa-circle-o"></i>Add Job</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <!-- /.sidebar -->
+</aside>

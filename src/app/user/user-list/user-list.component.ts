@@ -32,7 +32,10 @@ export class UserListComponent implements OnInit {
       this.loaderService.show(false);
     },3000);
     let apiUrl = ConstantConfig.APL_URL.USERS;
-    this.users = this.userService.GetList(apiUrl);
+    this.userService.GetList(apiUrl).subscribe((response: any) => {
+      console.log('log', response);
+      this.users = response;
+    });
     
     this.loaderService.status.subscribe((val : Boolean) => {
       this.isLoading = val;
