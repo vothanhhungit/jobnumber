@@ -20,14 +20,14 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.authenticationService.get_csrf_token().subscribe(
-      data => {
-        console.log('abc', localStorage.getItem('csrf_token'));
-      },
-      error => {
-       alert('error');
-      }
-    );
+    // this.authenticationService.get_csrf_token().subscribe(
+    //   data => {
+    //     console.log('abc', localStorage.getItem('csrf_token'));
+    //   },
+    //   error => {
+    //    alert('error');
+    //   }
+    // );
     this.loaderService.status.subscribe((val: Boolean) => {
       this.isLoading = val;
     })

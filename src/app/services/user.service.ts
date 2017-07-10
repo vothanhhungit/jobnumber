@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {LoaderService} from 'app/services/loader.service';
 import {Observable} from 'rxjs/Observable';
-import {Http, Response} from '@angular/http';
+import {Http, Response, Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
@@ -11,16 +11,14 @@ export class UserService {
 
     }
     GetList(apiUrl): Observable<any[]> {
-        return this._http.get(apiUrl).map(
-            (response: Response) => response.json()
-        ).catch((e:any) => {
-            //alert(e.json().error)
-            if (e.status === 401) {
-                //alert()
-                return Observable.throw('Unauthorized');
-            }
-            // do any other checking for statuses here
-        });
+        let _headers = new Headers();
+        _headers.append('Authorization', 'Bearer ' + JSON.parse(localStorage.getItem('currentUser')).token);
+        return this._http.get('http://jobnumber.hungvt.com/users/get-list',
+            {headers: _headers}).map((response: Response)=> response.json());
+
+        // return this._http.get(apiUrl).map(
+        //     (response: Response) => response.json()
+        // )
         // ...using get request
         //return this._http.get('http://595e5ac6ffb74e0011021717.mockapi.io/api/v1/users')
         // ...and calling .json() on the response to return data

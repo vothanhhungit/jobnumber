@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log( localStorage.getItem('currentUser'));
 
   }
 
@@ -25,7 +26,10 @@ export class LoginComponent implements OnInit {
     this.authenticationService.login(this.model.email, this.model.password)
     .subscribe(
       data => {
-          console.log(data);
+        if (data && data.token) {
+            // store user details and jwt token in local storage to keep user logged in between page refreshes
+            localStorage.setItem('currentUser', JSON.stringify(data));
+        }
       }
     )
   }

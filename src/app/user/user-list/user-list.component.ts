@@ -7,6 +7,7 @@ import {ConstantConfig} from 'app/config/constant.config';
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
+  // template: '{{token}}',
   styleUrls: ['./user-list.component.css'],
   providers: [UserService]
 })
@@ -15,7 +16,7 @@ export class UserListComponent implements OnInit {
   public isLoading : Boolean;
   public msg : object;
   public constants: object;
-  
+  public token: string;
   constructor(
     private loaderService: LoaderService,
     private userService: UserService,
@@ -28,12 +29,15 @@ export class UserListComponent implements OnInit {
   }
 
   ngOnInit() {
-    setTimeout(()=>{
-      this.loaderService.show(false);
-    },3000);
+    // // alert(localStorage.getItem('currentUser'));
+    // console.log('ssss');
+    // // this.token = (JSON.parse(localStorage.getItem('currentUser')).token)
+    // // setTimeout(()=>{
+    // //   this.loaderService.show(false);
+    // // },3000);
     let apiUrl = ConstantConfig.APL_URL.USERS;
     this.userService.GetList(apiUrl).subscribe((response: any) => {
-      console.log('log', response);
+      this.loaderService.show(false);
       this.users = response;
     });
     
