@@ -1,19 +1,26 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {Http, Response} from '@angular/http';
+import {Http, Response, Headers} from '@angular/http';
+import {Router} from  '@angular/router';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class APLService {
-    constructor() {
+    constructor(private _http: Http,
+        private route: Router
+    ) {
 
     }
 
     _getList(apiUrl: string) : Observable<any[]> {
-
-        return;
+        let _headers = new Headers();
+        _headers.append('Authorization', 'Bearer ' + JSON.parse(localStorage.getItem('currentUser')).token);
+        return this._http.get(apiUrl, {headers: _headers})
+        .map(this.extractData)
+        .catch(this.handleErrorObservable);
     }
 
     _getDetail(apiUrl: String) : Observable<any[]> {
@@ -31,6 +38,12 @@ export class APLService {
         return;
     }
 
-    _
+    private extractData(res: Response) {
+	    let body = res.json();
+        return body[0] || {};
+    }
+    private handleErrorObservable (error: Response | any) {
+        return Observable.throw(error.json());
+    }
     
 }

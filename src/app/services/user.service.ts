@@ -6,11 +6,14 @@ import {Router} from '@angular/router';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
+import {MsgConfig} from 'app/config/msg.config';
+import {ConstantConfig} from 'app/config/constant.config';
+
 
 @Injectable()
 export class UserService {
     constructor(private _http: Http,
-        private router: Router
+        private router: Router,
     ) {
 
     }
