@@ -3,7 +3,7 @@
   <div class="clearfix"></div>
 </div>
 <div class="mainContainer" ng-controller="UserListController">
-  <div id="nonscrollablearea">
+  <div id="nonscrollablearea" *ngIf="users?.Datas">
     <div class="table-responsive" id="tableHeader" ng-class="{'hidden_pager':hidden_pager}">
       <table ng-table="dataTable" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="mydatatable_info">
         <thead>

@@ -29,12 +29,6 @@ export class UserListComponent implements OnInit {
   }
 
   ngOnInit() {
-    // // alert(localStorage.getItem('currentUser'));
-    // console.log('ssss');
-    // // this.token = (JSON.parse(localStorage.getItem('currentUser')).token)
-    // // setTimeout(()=>{
-    // //   this.loaderService.show(false);
-    // // },3000);
     let apiUrl = ConstantConfig.APL_URL.USERS;
     this.userService.GetList(apiUrl).subscribe((response: any) => {
       this.loaderService.show(false);

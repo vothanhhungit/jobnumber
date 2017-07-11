@@ -7,10 +7,10 @@
     <!-- Sidebar user panel -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="assets/uploads/users/no-image-icon-md.png" class="img-circle" alt="$currentUser->name">
+        <img src="assets/uploads/users/no-image-icon-md.png" class="img-circle" alt="{{app.localStorageItem('currentUser').name}}">
       </div>
       <div class="pull-left info">
-        <p>$currentUser->name</p>
+        <p>{{app.localStorageItem('currentUser').name}}</p>
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
     </div>

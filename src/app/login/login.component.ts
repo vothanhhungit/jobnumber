@@ -1,6 +1,8 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import {MsgConfig} from 'app/config/msg.config';
 import {AuthenticationService} from 'app/services/authentication.service';
+import {Router} from '@angular/router';
+import {LoaderService} from 'app/services/loader.service';
 
 @Injectable()
 @Component({
@@ -11,24 +13,28 @@ import {AuthenticationService} from 'app/services/authentication.service';
 export class LoginComponent implements OnInit {
   public model: any = {};
   public msg: object;
-  constructor(private authenticationService: AuthenticationService) {
+  constructor(private authenticationService: AuthenticationService,
+    private router: Router,
+    private loaderService: LoaderService
+  ) {
     this.msg = MsgConfig;
   }
 
   ngOnInit() {
-    console.log( localStorage.getItem('currentUser'));
 
   }
 
   // call to authentication to handle login
   login() {
-    //alert(this.model.email);
+    this.loaderService.show(true);
     this.authenticationService.login(this.model.email, this.model.password)
     .subscribe(
       data => {
         if (data && data.token) {
+            this.loaderService.show(false);
             // store user details and jwt token in local storage to keep user logged in between page refreshes
             localStorage.setItem('currentUser', JSON.stringify(data));
+            this.router.navigate(['/']);
         }
       }
     )

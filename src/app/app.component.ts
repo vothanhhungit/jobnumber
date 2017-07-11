@@ -7,6 +7,8 @@ import { FooterComponent } from 'app/footer/footer.component';
 import { AuthenticationService } from 'app/services/authentication.service';
 import {GlobalApp} from 'app/global';
 
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,7 +18,8 @@ export class AppComponent implements OnInit {
   public isLoading: Boolean;
   constructor(private loaderService: LoaderService,
     private authenticationService: AuthenticationService,
-    private app: GlobalApp
+    private app: GlobalApp,
+    private router: Router
   ) {
 
   }
@@ -30,6 +33,9 @@ export class AppComponent implements OnInit {
     //    alert('error');
     //   }
     // );
+    if (!localStorage.getItem('currentUser')) {
+      this.router.navigate(['/login']);
+    }
     this.loaderService.status.subscribe((val: Boolean) => {
       this.isLoading = val;
     })
