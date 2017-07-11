@@ -5,6 +5,7 @@ import { Http, Response, Headers } from '@angular/http';
 import {Router} from '@angular/router';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class UserService {
@@ -13,14 +14,14 @@ export class UserService {
     ) {
 
     }
-    GetList(apiUrl): Observable<any[]> {
+    GetList(apiUrl) {
         let _headers = new Headers();
         _headers.append('Authorization', 'Bearer ' + JSON.parse(localStorage.getItem('currentUser')).token);
         return this._http.get('http://jobnumber.hungvt.com/users/get-list',
             { headers: _headers }).map(
                 (response: Response) => response.json()
         ).catch(
-            (error:any) => {
+            (error:Response | any) => {
                 if (error.status === 401) {
                     localStorage.removeItem('currentUser');
                     this.router.navigate(['/login']);
@@ -29,4 +30,5 @@ export class UserService {
             }
         );;
     }
+
 }

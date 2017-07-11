@@ -37,7 +37,7 @@
               <a href="users/@{{x.id}}/edit" class="btn btn-info btn-xs">
 		                        	<i class="fa fa-pencil" title="Edit"></i>
 		                        </a>
-              <a ng-click="deleteRow(x.id)" class="btn btn-danger btn-xs">
+              <a (click)="deleteRow(x.id)" class="btn btn-danger btn-xs">
 		                        	<i class="fa fa-trash-o" title="Delete"></i>
 	                        	</a>
             </td>

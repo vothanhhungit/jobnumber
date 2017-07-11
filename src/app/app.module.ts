@@ -22,7 +22,11 @@ import {FormsModule} from '@angular/forms';
 import {AuthenticationService} from 'app/services/authentication.service';
 import {GlobalApp} from 'app/global';
 
-
+import {DialogService} from './services/dialog.service';
+import {ConfirmDialog} from './confirm-dialog.component';
+import {AlertDialog} from './alert-dialog.component';
+import { MaterialModule, MdButtonModule  } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,21 +37,32 @@ import {GlobalApp} from 'app/global';
     LoginComponent,
     HeaderComponent,
     SideBarComponent,
-    FooterComponent
+    FooterComponent,
+    ConfirmDialog,
+    AlertDialog
   ],
   imports: [
     BrowserModule,
     routing,
     HttpModule,
-    FormsModule
+    FormsModule,
+    MaterialModule,
+    MaterialModule,
+    MdButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [
     LoaderService,
     AuthGuard,
     AuthenticationService,
-    GlobalApp
+    GlobalApp,
+    DialogService
     // UserService,
   ],
+  entryComponents: [
+        ConfirmDialog,
+        AlertDialog
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

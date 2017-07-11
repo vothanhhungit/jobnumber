@@ -3,6 +3,7 @@ import {MsgConfig} from 'app/config/msg.config';
 import {AuthenticationService} from 'app/services/authentication.service';
 import {Router} from '@angular/router';
 import {LoaderService} from 'app/services/loader.service';
+import {DialogService} from 'app/services/dialog.service';
 
 @Injectable()
 @Component({
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
   public msg: object;
   constructor(private authenticationService: AuthenticationService,
     private router: Router,
-    private loaderService: LoaderService
+    private loaderService: LoaderService,
+    private dialogService: DialogService
   ) {
     this.msg = MsgConfig;
   }
@@ -36,6 +38,10 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('currentUser', JSON.stringify(data));
             this.router.navigate(['/']);
         }
+      },
+      error => {
+        this.loaderService.show(false);
+        this.dialogService.alert(error.error).subscribe();
       }
     )
   }
