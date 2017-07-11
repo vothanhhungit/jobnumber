@@ -7,7 +7,7 @@
   <app-side-bar></app-side-bar>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" [ngClass]="{'not-logged ml-0': !currentUser}">
+  <div class="content-wrapper" [ngClass]="{'not-logged ml-0': !app.localStorageItem('currentUser')}">
     <!-- Main content -->
     <section class="content">
       <div class="row">

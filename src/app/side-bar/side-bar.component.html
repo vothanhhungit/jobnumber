@@ -1,5 +1,4 @@
-currentUser : {{currentUser.token}}
-<aside class="main-sidebar" *ngIf="currentUser">
+<aside class="main-sidebar" *ngIf="app.localStorageItem('currentUser')">
   <!-- sidebar: style can be found in sidebar.less -->
   <section class="sidebar">
     <title ng-if=title>@title - Job Number Management System</title>

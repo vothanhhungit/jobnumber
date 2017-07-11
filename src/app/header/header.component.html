@@ -1,4 +1,4 @@
-<header class="main-header" *ngIf="!currentUser">
+<header class="main-header" *ngIf="app.localStorageItem('currentUser')">
   <!-- Logo -->
   <a href="url('/')" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->

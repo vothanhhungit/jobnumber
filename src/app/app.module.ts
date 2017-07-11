@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 
 import {FormsModule} from '@angular/forms';
 import {AuthenticationService} from 'app/services/authentication.service';
+import {GlobalApp} from 'app/global';
 
 
 
@@ -43,7 +44,8 @@ import {AuthenticationService} from 'app/services/authentication.service';
   providers: [
     LoaderService,
     AuthGuard,
-    AuthenticationService
+    AuthenticationService,
+    GlobalApp
     // UserService,
   ],
   bootstrap: [AppComponent]

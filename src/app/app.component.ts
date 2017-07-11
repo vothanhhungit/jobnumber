@@ -5,6 +5,7 @@ import { HeaderComponent } from 'app/header/header.component';
 import { SideBarComponent } from 'app/side-bar/side-bar.component';
 import { FooterComponent } from 'app/footer/footer.component';
 import { AuthenticationService } from 'app/services/authentication.service';
+import {GlobalApp} from 'app/global';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { AuthenticationService } from 'app/services/authentication.service';
 export class AppComponent implements OnInit {
   public isLoading: Boolean;
   constructor(private loaderService: LoaderService,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private app: GlobalApp
   ) {
 
   }
