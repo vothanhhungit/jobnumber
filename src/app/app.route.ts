@@ -9,7 +9,8 @@ const appRoutes : Routes = [
     {path: 'login', component: LoginComponent},
     {path: '', component: HomeComponent, canActivate: [AuthGuard]},
     {path: 'user-list', component: UserListComponent},
-    // {path: 'user', component: UserComponent}
+    {path: 'users/:id/edit', component: UserComponent},
+    {path: 'users/create', component: UserComponent}
 ]
 
 export const routing = RouterModule.forRoot(appRoutes);

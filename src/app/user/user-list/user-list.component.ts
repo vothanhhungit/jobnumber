@@ -46,11 +46,23 @@ export class UserListComponent implements OnInit {
     
   }
 
-  deleteRow(id: Number) {
+  deleteRow(_id: Number) {
     this.dialogService.confirm(MsgConfig.DEL_CONFIRM)
     .subscribe(res => {
       if (res) {
-        alert(res);
+        this.loaderService.show(true);
+        this.aplService._delete(ConstantConfig.APL_URL.USER_DELETE, {id: _id}).subscribe(
+          data => {
+            this.loaderService.show(false);
+            if (data.Datas.error) {
+              this.dialogService.alert(data.Datas.error);
+            }
+          },
+          error => {
+            this.loaderService.show(false);
+            this.dialogService.alert(error.error);
+          }
+        )
       }
     });
   }

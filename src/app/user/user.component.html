@@ -1,3 +1,8 @@
-<p>
-  user works!
-</p>
+<div class="x_title">
+  <h2>
+    *ngIf="userId" Edit User
+    @if ($activePage === 'userCreate') Create User @else Edit User
+    <a href="{{url('users/create')}}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Create New </a> @endif
+  </h2>
+  <div class="clearfix"></div>
+</div>

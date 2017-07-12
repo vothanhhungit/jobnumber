@@ -33,7 +33,7 @@ import {APLService} from './services/APL.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    // UserComponent,
+    UserComponent,
     UserListComponent,
     LoginComponent,
     HeaderComponent,

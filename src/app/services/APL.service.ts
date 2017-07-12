@@ -23,7 +23,7 @@ export class APLService {
         .catch(this.handleErrorObservable);
     }
 
-    _getDetail(apiUrl: String) : Observable<any[]> {
+    _getDetail(apiUrl: string) : Observable<any[]> {
 
         return ;
     }
@@ -33,9 +33,19 @@ export class APLService {
         return;
     }
 
-    _update(apiUrl: String, _data: Object): Observable<any[]> {
+    _update(apiUrl: string, _data: Object): Observable<any[]> {
 
         return;
+    }
+
+    _delete(apiUrl: string, _data) : Observable<any> {
+        let _headers = new Headers();
+        _headers.append('Accept', 'application/json');
+        _headers.append('Content-Type', 'application/json');
+        _headers.append('Authorization', 'Bearer ' + JSON.parse(localStorage.getItem('currentUser')).token);
+        return this._http.post(apiUrl, JSON.stringify(_data) , {headers: _headers})
+        .map(this.extractData)
+        .catch(this.handleErrorObservable);
     }
 
     private extractData(res: Response) {

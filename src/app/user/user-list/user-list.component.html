@@ -34,7 +34,7 @@
               />
             </td>
             <td class="alignCenter">
-              <a href="users/@{{x.id}}/edit" class="btn btn-info btn-xs">
+              <a class="btn btn-info btn-xs" [routerLink]="['/users', x.id, 'edit']">
 		                        	<i class="fa fa-pencil" title="Edit"></i>
 		                        </a>
               <a (click)="deleteRow(x.id)" class="btn btn-danger btn-xs">
