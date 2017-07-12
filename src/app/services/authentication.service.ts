@@ -9,11 +9,11 @@ export class AuthenticationService {
 
     }
 
-    login(email: string, password: string) : Observable<any>{
+    login(apiUrl: string, email: string, password: string) : Observable<any>{
         let _headers = new Headers();
         _headers.append('Accept', 'application/json');
         _headers.append('Content-Type', 'application/json');
-        return this._http.post('http://jobnumber.hungvt.com/api/v1/login',
+        return this._http.post(apiUrl,
             JSON.stringify({email: email, password: password}),
             {headers: _headers}
         ).map(this.extractData)

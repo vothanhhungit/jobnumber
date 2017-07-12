@@ -40,7 +40,7 @@ export class APLService {
 
     private extractData(res: Response) {
 	    let body = res.json();
-        return body[0] || {};
+        return body || {};
     }
     private handleErrorObservable (error: Response | any) {
         return Observable.throw(error.json());

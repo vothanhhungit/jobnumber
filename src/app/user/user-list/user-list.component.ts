@@ -4,6 +4,7 @@ import {UserService} from 'app/services/user.service';
 import {MsgConfig} from 'app/config/msg.config';
 import {ConstantConfig} from 'app/config/constant.config';
 import {DialogService} from 'app/services/dialog.service';
+import {APLService} from 'app/services/APL.service';
 
 @Component({
   selector: 'app-user-list',
@@ -22,7 +23,8 @@ export class UserListComponent implements OnInit {
   constructor(
     private loaderService: LoaderService,
     private userService: UserService,
-    private dialogService: DialogService
+    private dialogService: DialogService,
+    private aplService: APLService
     // private msgConfig: MsgConfig,
     // private constantConfig: ConstantConfig
   ) {
@@ -33,7 +35,7 @@ export class UserListComponent implements OnInit {
 
   ngOnInit() {
     let apiUrl = ConstantConfig.APL_URL.USERS;
-    this.userService.GetList(apiUrl).subscribe((response:any) => {
+    this.aplService._getList(apiUrl).subscribe((response:any) => {
       this.loaderService.show(false);
       this.users = response;
     });

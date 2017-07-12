@@ -27,6 +27,7 @@ import {ConfirmDialog} from './confirm-dialog.component';
 import {AlertDialog} from './alert-dialog.component';
 import { MaterialModule, MdButtonModule  } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {APLService} from './services/APL.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpModule,
     FormsModule,
     MaterialModule,
-    MaterialModule,
     MdButtonModule,
     BrowserAnimationsModule
   ],
@@ -56,7 +56,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AuthGuard,
     AuthenticationService,
     GlobalApp,
-    DialogService
+    DialogService,
+    APLService
     // UserService,
   ],
   entryComponents: [

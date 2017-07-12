@@ -1,5 +1,6 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import {MsgConfig} from 'app/config/msg.config';
+import {ConstantConfig} from 'app/config/constant.config';
 import {AuthenticationService} from 'app/services/authentication.service';
 import {Router} from '@angular/router';
 import {LoaderService} from 'app/services/loader.service';
@@ -29,7 +30,7 @@ export class LoginComponent implements OnInit {
   // call to authentication to handle login
   login() {
     this.loaderService.show(true);
-    this.authenticationService.login(this.model.email, this.model.password)
+    this.authenticationService.login(ConstantConfig.APL_URL.LOGIN, this.model.email, this.model.password)
     .subscribe(
       data => {
         if (data && data.token) {
