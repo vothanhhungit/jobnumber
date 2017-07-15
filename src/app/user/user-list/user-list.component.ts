@@ -1,9 +1,10 @@
+import {Injectable} from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import {LoaderService} from 'app/services/loader.service';
 import {UserService} from 'app/services/user.service';
 import {MsgConfig} from 'app/config/msg.config';
 import {ConstantConfig} from 'app/config/constant.config';
-
+@Injectable()
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -11,10 +12,11 @@ import {ConstantConfig} from 'app/config/constant.config';
   providers: [UserService]
 })
 export class UserListComponent implements OnInit {
-  public users: object;
+  //public users: object;
   public isLoading : Boolean;
   public msg : object;
   public constants: object;
+  public users: any[];
   
   constructor(
     private loaderService: LoaderService,
@@ -29,10 +31,13 @@ export class UserListComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(()=>{
-      this.loaderService.show(false);
+      // this.loaderService.show(false);
     },3000);
     let apiUrl = ConstantConfig.APL_URL.USERS;
-    this.users = this.userService.GetList(apiUrl);
+    this.userService.GetList(apiUrl).subscribe((response: any) => {
+      this.users = response;
+      this.loaderService.show(false);
+    });
     
     this.loaderService.status.subscribe((val : Boolean) => {
       this.isLoading = val;

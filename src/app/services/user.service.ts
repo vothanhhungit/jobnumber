@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {LoaderService} from 'app/services/loader.service';
-import {Observable} from 'rxjs/Observable';
-import {Http, Response} from '@angular/http';
+import { Injectable } from '@angular/core';
+import { LoaderService } from 'app/services/loader.service';
+import { Observable } from 'rxjs/Observable';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -9,9 +9,18 @@ export class UserService {
     constructor(private _http: Http) {
 
     }
-    GetList(apiUrl): Observable<any[]> {
-        return this._http.get(apiUrl).map((response: Response) => response.json());
+    GetList(apiUrl) { this._http
+  .get('http://595e5ac6ffb74e0011021717.mockapi.io/api/v1/users')
+  .map(res => res.json());
     }
+//   .subscribe(
+//     (data) => this.data = data,
+//     (err) => this.error = err);
+        // return this._http.get('http://595e5ac6ffb74e0011021717.mockapi.io/api/v1/users', options).map(res => res.json()).subscribe(
+        //     (data) => this.data = data,
+        //     (err) => this.error = err
+        // );
+    //}
     // GetList(): object {
 
 

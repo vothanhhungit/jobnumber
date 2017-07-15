@@ -1,4 +1,4 @@
-let HOST: string = 'http://jobnumber.bjdev.net';
+let HOST: string = 'http://jobnumber.hungvt.com';
 let cstc: object = {
     APL_URL: {
         'LOGIN': HOST + '/xxx/login',
