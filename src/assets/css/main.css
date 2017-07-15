@@ -51,3 +51,9 @@ table.dataTable tfoot .sorting:after {
     pointer-events: none;
     opacity: 0.7;
 }
+<<<<<<< .merge_file_a02764
+=======
+.not-logged {
+    margin-left: 0px !important;
+}
+>>>>>>> .merge_file_a05604

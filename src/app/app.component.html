@@ -1,4 +1,5 @@
 <div class="wrapper">
+<<<<<<< .merge_file_a12160
   <header class="main-header">
     <!-- Logo -->
     <a href="url('/')" class="logo">
@@ -148,6 +149,17 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+=======
+  
+  <!--Header -->
+  <app-header></app-header>
+
+  <!-- Left side column. contains the logo and sidebar -->
+  <app-side-bar></app-side-bar>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" [ngClass]="{'not-logged ml-0': !app.localStorageItem('currentUser')}">
+>>>>>>> .merge_file_a01120
     <!-- Main content -->
     <section class="content">
       <div class="row">
@@ -175,6 +187,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+<<<<<<< .merge_file_a12160
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0
@@ -184,3 +197,10 @@
 
 </div>
 <!-- ./wrapper -->
+=======
+  <!-- Footer -->
+  <app-footer></app-footer>
+
+</div>
+<!-- ./wrapper -->
+>>>>>>> .merge_file_a01120
